@@ -1,0 +1,109 @@
+@import "tailwindcss";
+@plugin "daisyui";
+
+
+/* Root and common variables */
+:root {
+  /* Light Theme */
+  --bg-light: #f5f1ea;
+  --primary-light: #3e3a39;
+  --secondary-light: #a6988c;
+  --accent-light: #ddd6ce;
+  --text-light: #1c1c1c;
+
+  /* Dark Theme */
+  --bg-dark: #2e2927;       /* Dark chocolate 3e2723*/
+  --primary-dark: #f5f1ea;  /* Light beige */
+  --secondary-dark: #f5f1ea;
+  --accent-dark: #ddd6ce;
+  --text-dark: #92794e;
+
+  /* Common */
+  --font-bold: 700;
+  --transition-speed: 0.3s;
+}
+
+/* Light theme */
+[data-theme="light"] {
+  background-color: var(--bg-light);
+  color: var(--text-light);
+
+  --pf-primary: var(--primary-light);
+  --pf-secondary: var(--secondary-light);
+  --pf-accent: var(--accent-light);
+  --pf-base-100: var(--bg-light);
+  --pf-base-content: var(--text-light);
+}
+
+/* Dark theme */
+[data-theme="dark"] {
+  background-color: var(--bg-dark);
+  color: var(--text-dark);
+
+  --pf-primary: var(--primary-dark);
+  --pf-secondary: var(--secondary-dark);
+  --pf-accent: var(--accent-dark);
+  --pf-base-100: var(--bg-dark);
+  --pf-base-content: var(--text-dark);
+}
+
+/* Buttons */
+.btn {
+  font-weight: var(--font-bold);
+  border-radius: 0.375rem;
+  padding: 0.75rem 1.5rem;
+  cursor: pointer;
+  transition: background-color var(--transition-speed),
+    color var(--transition-speed),
+    box-shadow var(--transition-speed),
+    transform var(--transition-speed);
+}
+
+.btn-primary {
+  background-color: var(--pf-primary);
+  color: var(--pf-base-100);
+  box-shadow: 0 4px 6px rgba(62, 58, 57, 0.2);
+}
+
+.btn-primary:hover,
+.btn-primary:focus {
+  background-color: var(--pf-secondary);
+  box-shadow: 0 6px 12px rgba(166, 152, 140, 0.3);
+  transform: translateY(-2px);
+}
+
+/* Navbar background */
+.navbar {
+  background-color: var(--pf-base-100);
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
+  transition: background-color var(--transition-speed);
+}
+
+/* Text and links */
+a {
+  color: var(--pf-primary);
+  transition: color var(--transition-speed);
+}
+
+a:hover,
+a:focus {
+  color: var(--pf-accent);
+}
+
+/* Mobile menu background */
+.mobile-menu {
+  background-color: var(--pf-secondary);
+  color: var(--pf-base-content);
+}
+
+/* Utility for smooth transitions on background and text */
+body {
+  transition: background-color var(--transition-speed), color var(--transition-speed);
+  background-color: var(--pf-base-100);
+  color: var(--pf-base-content);
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  margin: 0;
+  padding: 0;
+}
+
+
