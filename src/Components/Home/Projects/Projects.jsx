@@ -38,7 +38,7 @@ const projects = [
   {
     id: "greennest",
     name: "GreenNest",
-    image: "https://i.ibb.co/ynxThwFP/green-nest.png", // Please replace with actual image URL or local import
+    image: "https://i.ibb.co/ynxThwFP/green-nest.png", 
     liveLink: "https://b12-a09-green-nest-ph.netlify.app/",
     description:
       "Elegant SPA for indoor plant lovers offering plant care guides, shopping, and expert consultations with a calming design.",
@@ -92,7 +92,7 @@ viewport={{ once: false, amount: 0.25 }}
               className="bg-[var(--pf-base-100)] rounded-xl shadow-lg overflow-hidden transform hover:scale-[1.03] duration-300 flex flex-col"
               variants={cardVariants}
               custom={i}
-              style={{ minWidth: "320px" }} // Ensure a minimum width for better banner visibility
+              style={{ minWidth: "320px" }} 
             >
               {/* Project Image */}
               <img
@@ -117,7 +117,7 @@ viewport={{ once: false, amount: 0.25 }}
                       className="text-xs font-semibold px-3 py-1 rounded-full bg-[var(--pf-accent)]"
                       style={{
                         userSelect: "none",
-                        color: "#2e2e2e", // Dark bubble text for visibility
+                        color: "#2e2e2e", 
                       }}
                     >
                       {tech}
