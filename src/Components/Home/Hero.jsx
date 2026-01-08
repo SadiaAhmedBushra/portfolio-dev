@@ -20,8 +20,7 @@ const Hero = () => {
           className="text-xl font-semibold"
           style={{ color: "var(--pf-secondary)" }}
         >
-          Frontend Developer | Web Developer | Passionate about building
-          clean, user-friendly interfaces.
+          Junior Web Developer | Teaching Assistant
         </p>
         <p
           className="text-base max-w-xl"
