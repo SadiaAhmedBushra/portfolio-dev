@@ -145,7 +145,10 @@ const ProjectDetail = () => {
       <motion.div
         className="mb-8 flex flex-wrap gap-3"
         initial="hidden"
-        animate="visible"
+        // animate="visible"
+        whileInView="visible"
+viewport={{ once: false, amount: 0.25 }}
+
       >
         {project.techStack.map((tech, i) => (
           <motion.span
@@ -168,7 +171,10 @@ const ProjectDetail = () => {
         className="mb-8"
         variants={sectionVariants}
         initial="hidden"
-        animate="visible"
+        // animate="visible"
+        whileInView="visible"
+viewport={{ once: false, amount: 0.25 }}
+
       >
         <h2 className="text-2xl font-semibold mb-3">Description</h2>
         <p className="text-[var(--pf-secondary)] leading-relaxed">
@@ -181,7 +187,10 @@ const ProjectDetail = () => {
         className="mb-8 flex flex-col md:flex-row md:space-x-8 space-y-4 md:space-y-0"
         variants={sectionVariants}
         initial="hidden"
-        animate="visible"
+        // animate="visible"
+        whileInView="visible"
+viewport={{ once: false, amount: 0.25 }}
+
       >
         <a
           href={project.liveLink}
@@ -214,7 +223,10 @@ const ProjectDetail = () => {
         className="mb-8"
         variants={sectionVariants}
         initial="hidden"
-        animate="visible"
+        // animate="visible"
+        whileInView="visible"
+viewport={{ once: false, amount: 0.25 }}
+
       >
         <h2 className="text-2xl font-semibold mb-3">Challenges Faced</h2>
         <ul className="list-disc list-inside text-[var(--pf-secondary)] space-y-2">
@@ -228,7 +240,10 @@ const ProjectDetail = () => {
       <motion.div
         variants={sectionVariants}
         initial="hidden"
-        animate="visible"
+        // animate="visible"
+        whileInView="visible"
+viewport={{ once: false, amount: 0.25 }}
+
       >
         <h2 className="text-2xl font-semibold mb-3">
           Potential Improvements & Future Plans

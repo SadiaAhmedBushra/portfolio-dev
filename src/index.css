@@ -12,13 +12,12 @@
   --text-light: #1c1c1c;
 
   /* Dark Theme */
-  --bg-dark: #2e2927;       /* Dark chocolate 3e2723*/
-  --primary-dark: #f5f1ea;  /* Light beige */
+  --bg-dark: #2e2927;      
+  --primary-dark: #f5f1ea;  
   --secondary-dark: #f5f1ea;
   --accent-dark: #ddd6ce;
   --text-dark: #92794e;
 
-  /* Common */
   --font-bold: 700;
   --transition-speed: 0.3s;
 }
@@ -72,14 +71,12 @@
   transform: translateY(-2px);
 }
 
-/* Navbar background */
 .navbar {
   background-color: var(--pf-base-100);
   box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
   transition: background-color var(--transition-speed);
 }
 
-/* Text and links */
 a {
   color: var(--pf-primary);
   transition: color var(--transition-speed);
@@ -90,7 +87,6 @@ a:focus {
   color: var(--pf-accent);
 }
 
-/* Mobile menu background */
 .mobile-menu {
   background-color: var(--pf-secondary);
   color: var(--pf-base-content);
@@ -107,3 +103,16 @@ body {
 }
 
 
+[data-theme="light"] .resume-btn {
+  color: #f9fafb; 
+}
+[data-theme="light"] .resume-btn svg {
+  color: #f9fafb;
+}
+
+[data-theme="dark"] .resume-btn {
+  color: #2e2927; 
+}
+[data-theme="dark"] .resume-btn svg {
+  color: #2e2927;
+}

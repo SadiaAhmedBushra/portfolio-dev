@@ -5,7 +5,7 @@ import { motion } from "framer-motion";
 const projects = [
   {
     id: "life-journal",
-    name: "🌱 The Life Journal",
+    name: "The Life Journal",
     image: "https://i.ibb.co/yBsVtD29/life-journal.png",
     liveLink: "https://the-life-journal.web.app/",
     description:
@@ -37,7 +37,7 @@ const projects = [
   },
   {
     id: "greennest",
-    name: "🌿 GreenNest",
+    name: "GreenNest",
     image: "https://i.ibb.co/ynxThwFP/green-nest.png", // Please replace with actual image URL or local import
     liveLink: "https://b12-a09-green-nest-ph.netlify.app/",
     description:
@@ -81,7 +81,9 @@ const Projects = () => {
       <motion.div
         className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-10 justify-center w-full max-w-[1100px]"
         initial="hidden"
-        animate="visible"
+        whileInView="visible"
+viewport={{ once: false, amount: 0.25 }}
+
       >
         {projects.map(
           ({ id, name, image, liveLink, description, techStack }, i) => (

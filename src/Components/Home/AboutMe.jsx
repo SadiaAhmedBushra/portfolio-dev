@@ -1,6 +1,7 @@
 import React from "react";
 import { motion } from "framer-motion";
 
+
 const containerVariants = {
   hidden: {},
   visible: {
@@ -56,7 +57,8 @@ const AboutMe = () => {
         className="space-y-24"
         variants={containerVariants}
         initial="hidden"
-        animate="visible"
+        whileInView="visible"
+        viewport={{ once: false, amount: 0.3 }}
       >
         {/* Programming Journey */}
         <motion.div
@@ -113,12 +115,11 @@ const AboutMe = () => {
             I’m driven by the joy of building experiences that feel effortless
             to users. Whether it’s designing elegant interfaces or structuring
             efficient application logic, I enjoy working on products that balance
-            beauty, performance, and usability. Collaboration, learning, and
-            creative problem-solving energize me.
+            beauty, performance, and usability.
           </p>
         </motion.div>
 
-        {/* Beyond Coding (Hobbies) */}
+        {/* Beyond Coding */}
         <motion.div
           variants={slideInLeft}
           className="rounded-xl border border-dashed border-[var(--pf-accent)]
@@ -129,11 +130,9 @@ const AboutMe = () => {
             Beyond Coding
           </h3>
           <p className="text-[var(--pf-secondary)] text-lg font-serif leading-relaxed">
-            Outside of programming, I enjoy creative outlets like painting, which
-            helps me explore color, balance, and expression — skills that
-            naturally influence my UI design choices. I also find peace in nature
-            and love nurturing indoor plants, a hobby that reflects my patience,
-            mindfulness, and appreciation for growth.
+            Outside of programming, I enjoy painting and nurturing indoor plants.
+            These hobbies bring calmness, patience, and balance — values I carry
+            into my development process and design thinking.
           </p>
         </motion.div>
 
@@ -148,14 +147,14 @@ const AboutMe = () => {
             Personality & Vision
           </h3>
           <p className="text-[var(--pf-secondary)] text-lg font-serif leading-relaxed">
-            My personality blends curiosity, dedication, and empathy. I believe
-            continuous learning and thoughtful design are the foundations of
-            meaningful software. My goal is to contribute to projects that not
-            only solve problems but also inspire confidence, clarity, and
-            positive impact — for users and teams alike.
+            I value curiosity, empathy, and continuous learning. My vision is to
+            build software that feels calm, purposeful, and empowering — tools
+            that make life simpler while leaving a positive impact.
           </p>
         </motion.div>
       </motion.div>
+
+
     </section>
   );
 };
