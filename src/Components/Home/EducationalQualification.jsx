@@ -8,8 +8,8 @@ const educationData = [
     year: "2020 - 2024",
     cgpa: "3.98 / 4.00",
     details: [
-      "Completed various projects during my bachelor’s degree in courses like Structured Programming, Data Structures, Algorithms, OOP, Software Development, Smartphone App Development, and Web Development.",
-      "Actively participated in programming contests arranged by university's programming club and ICPC Dhaka Regional.",
+      "Completed various projects during my bachelor’s degree in courses like Structured Programming, Data Structures, Algorithms, OOP, Software Development, Smartphone App Development, and Web Development",
+      "Actively participated in programming contests arranged by university's programming club and ICPC Dhaka Regional",
       "Dean's List Scholarship - Spring 2024 & Fall 2023",
     ],
   },
@@ -19,16 +19,16 @@ const educationData = [
     year: "2017 - 2019",
     cgpa: "5.00 / 5.00 (without optional)",
     details: [
-      "Science major.",
+      "Science major",
       "HSC Examination General Scholarship - Dhaka Board",
     ],
   },
   {
     degree: "Secondary School Certificate (SSC) - Science",
     institution: "Mohammadpur Preparatory School and College",
-    year: "2014 - 2017",
+    year: "2015 - 2017",
     cgpa: "5.00 / 5.00",
-    details: ["Science major."],
+    details: ["Science major"],
   },
 ];
 
@@ -83,7 +83,7 @@ const EducationalQualification = () => {
   return (
     <section
       id="education"
-      className="relative max-w-6xl mx-auto px-6 py-28 overflow-hidden flex flex-col"
+      className="relative max-w-6xl mx-auto px-6 py-28 overflow-hidden overflow-x-hidden flex flex-col"
       style={{ color: "var(--pf-primary)" }}
     >
       {/* Floating background blobs */}
@@ -117,7 +117,7 @@ const EducationalQualification = () => {
       </motion.h2>
 
       {/* Carousel container with fixed height and relative positioning */}
-      <div className="relative w-full max-w-4xl mx-auto h-[350px] flex-grow">
+      <div className="relative w-full max-w-4xl mx-auto min-h-[560px] sm:min-h-[520px] md:h-[350px] flex-grow">
         <AnimatePresence initial={false} custom={direction}>
           <motion.article
             key={page}
@@ -130,7 +130,7 @@ const EducationalQualification = () => {
               x: { type: "spring", stiffness: 300, damping: 30 },
               opacity: { duration: 0.2 },
             }}
-            className="absolute top-0 left-0 w-full h-full bg-[rgba(255,255,255,0.1)] dark:bg-[rgba(0,0,0,0.3)] p-10 rounded-2xl shadow-lg cursor-default select-none"
+            className="absolute top-0 left-0 w-full h-full bg-[rgba(255,255,255,0.1)] dark:bg-[rgba(0,0,0,0.3)] p-7 sm:p-6 md:p-10 rounded-2xl shadow-lg cursor-default select-none flex flex-col justify-center items-center text-center"
             style={{ boxSizing: "border-box" }}
           >
             <h3 className="text-3xl font-semibold mb-3">
@@ -158,16 +158,47 @@ const EducationalQualification = () => {
           <button
             onClick={() => paginate(-1)}
             aria-label="Previous"
-            className="bg-[var(--pf-primary)] hover:bg-[var(--pf-accent)] text-white px-5 py-2 rounded-lg transition"
+            className="bg-[var(--pf-primary)] px-6 py-3 rounded-full shadow-lg hover:bg-[var(--pf-accent)] transition-colors duration-300 font-semibold cursor-pointer flex items-center gap-2 select-none drop-shadow-md text-[var(--pf-base-100)] dark:text-[var(--pf-base-900)]"
+            style={{ textShadow: "0 0 5px rgba(0,0,0,0.2)" }}
           >
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              className="h-5 w-5"
+              fill="none"
+              viewBox="0 0 24 24"
+              stroke="currentColor"
+              strokeWidth={2}
+            >
+              <path
+                strokeLinecap="round"
+                strokeLinejoin="round"
+                d="M15 19l-7-7 7-7"
+              />
+            </svg>
             Prev
           </button>
+
           <button
             onClick={() => paginate(1)}
             aria-label="Next"
-            className="bg-[var(--pf-primary)] hover:bg-[var(--pf-accent)] text-white px-5 py-2 rounded-lg transition"
+            className="bg-[var(--pf-primary)] px-6 py-3 rounded-full shadow-lg hover:bg-[var(--pf-accent)] transition-colors duration-300 font-semibold cursor-pointer flex items-center gap-2 select-none drop-shadow-md text-[var(--pf-base-100)] dark:text-[var(--pf-base-900)]"
+            style={{ textShadow: "0 0 5px rgba(0,0,0,0.2)" }}
           >
             Next
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              className="h-5 w-5"
+              fill="none"
+              viewBox="0 0 24 24"
+              stroke="currentColor"
+              strokeWidth={2}
+            >
+              <path
+                strokeLinecap="round"
+                strokeLinejoin="round"
+                d="M9 5l7 7-7 7"
+              />
+            </svg>
           </button>
         </div>
       </div>
