@@ -1,7 +1,7 @@
 import React from "react";
 import { motion } from "framer-motion";
 import { MdOutlineDownloadForOffline } from "react-icons/md";
-import photoUrl from "../../assets/bFormal.png";
+import photoUrl from "../../assets/bFormal.jpg";
 
 const slideLeft = {
   hidden: { opacity: 0, x: -60 },
