@@ -1,5 +1,3 @@
-
-
 import React, { useState, useEffect } from "react";
 import { RxHamburgerMenu } from "react-icons/rx";
 import { MdOutlineLightMode, MdOutlineDarkMode } from "react-icons/md";
@@ -149,7 +147,7 @@ const Navbar = () => {
       {/* Mobile Menu */}
       <div
         className={`md:hidden font-semibold uppercase tracking-widest overflow-hidden transition-[max-height,padding] duration-500 ease-in-out
-          ${menuOpen ? "max-h-64 p-5" : "max-h-0 p-0"}`}
+          ${menuOpen ? "max-h-screen p-5" : "max-h-0 p-0"}`}
         style={{
           backgroundColor: "var(--pf-secondary)",
           color: "var(--pf-base-content)",

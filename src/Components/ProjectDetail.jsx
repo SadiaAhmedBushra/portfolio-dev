@@ -57,7 +57,7 @@ const projects = [
       "Implement multi-language support.",
     ],
   },
-    {
+  {
     id: "greennest",
     name: "🌿 GreenNest",
     description:
@@ -84,7 +84,7 @@ const projects = [
       "Optimize performance and loading times.",
       "Expand to multi-language support and user profiles.",
     ],
-  }
+  },
 ];
 
 const techStackVariants = {
@@ -145,10 +145,8 @@ const ProjectDetail = () => {
       <motion.div
         className="mb-8 flex flex-wrap gap-3"
         initial="hidden"
-        // animate="visible"
         whileInView="visible"
-viewport={{ once: false, amount: 0.25 }}
-
+        viewport={{ once: false, amount: 0.25 }}
       >
         {project.techStack.map((tech, i) => (
           <motion.span
@@ -158,7 +156,7 @@ viewport={{ once: false, amount: 0.25 }}
             className="text-sm font-semibold px-4 py-1 rounded-full bg-[var(--pf-accent)]"
             style={{
               userSelect: "none",
-              color: "#2e2e2e", // darker text for visibility in dark mode
+              color: "#2e2e2e",
             }}
           >
             {tech}
@@ -171,10 +169,8 @@ viewport={{ once: false, amount: 0.25 }}
         className="mb-8"
         variants={sectionVariants}
         initial="hidden"
-        // animate="visible"
         whileInView="visible"
-viewport={{ once: false, amount: 0.25 }}
-
+        viewport={{ once: false, amount: 0.25 }}
       >
         <h2 className="text-2xl font-semibold mb-3">Description</h2>
         <p className="text-[var(--pf-secondary)] leading-relaxed">
@@ -187,32 +183,27 @@ viewport={{ once: false, amount: 0.25 }}
         className="mb-8 flex flex-col md:flex-row md:space-x-8 space-y-4 md:space-y-0"
         variants={sectionVariants}
         initial="hidden"
-        // animate="visible"
         whileInView="visible"
-viewport={{ once: false, amount: 0.25 }}
-
+        viewport={{ once: false, amount: 0.25 }}
       >
         <a
           href={project.liveLink}
           target="_blank"
           rel="noopener noreferrer"
-          className="btn btn-primary px-6 py-3 font-semibold rounded-md shadow-md text-center"
-          style={{
-            backgroundColor: "var(--pf-primary)",
-            color: "var(--pf-base-100)",
-          }}
+          className="resume-btn bg-[var(--pf-primary)] px-6 py-2 rounded-lg shadow-lg hover:bg-[var(--pf-accent)] transition-colors duration-300 font-semibold text-lg cursor-pointer flex items-center justify-center select-none drop-shadow-md text-[var(--pf-base-100)]"
+          aria-label="Visit Live Project"
+          title="Visit Live Project"
         >
           Visit Live Project
         </a>
+
         <a
           href={project.githubClient}
           target="_blank"
           rel="noopener noreferrer"
-          className="btn btn-secondary px-6 py-3 font-semibold rounded-md shadow-md text-center"
-          style={{
-            backgroundColor: "var(--pf-accent)",
-            color: "var(--pf-primary)",
-          }}
+          className="resume-btn bg-[var(--pf-accent)] px-6 py-2 rounded-lg shadow-lg hover:bg-[var(--pf-primary)] hover:text-white transition-colors duration-300 font-semibold text-lg cursor-pointer flex items-center justify-center select-none drop-shadow-md text-[var(--pf-primary)]"
+          aria-label="GitHub Client Repo"
+          title="GitHub Client Repo"
         >
           GitHub Client Repo
         </a>
@@ -223,10 +214,8 @@ viewport={{ once: false, amount: 0.25 }}
         className="mb-8"
         variants={sectionVariants}
         initial="hidden"
-        // animate="visible"
         whileInView="visible"
-viewport={{ once: false, amount: 0.25 }}
-
+        viewport={{ once: false, amount: 0.25 }}
       >
         <h2 className="text-2xl font-semibold mb-3">Challenges Faced</h2>
         <ul className="list-disc list-inside text-[var(--pf-secondary)] space-y-2">
@@ -240,10 +229,8 @@ viewport={{ once: false, amount: 0.25 }}
       <motion.div
         variants={sectionVariants}
         initial="hidden"
-        // animate="visible"
         whileInView="visible"
-viewport={{ once: false, amount: 0.25 }}
-
+        viewport={{ once: false, amount: 0.25 }}
       >
         <h2 className="text-2xl font-semibold mb-3">
           Potential Improvements & Future Plans

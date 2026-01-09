@@ -38,7 +38,7 @@ const projects = [
   {
     id: "greennest",
     name: "GreenNest",
-    image: "https://i.ibb.co/ynxThwFP/green-nest.png", 
+    image: "https://i.ibb.co/ynxThwFP/green-nest.png",
     liveLink: "https://b12-a09-green-nest-ph.netlify.app/",
     description:
       "Elegant SPA for indoor plant lovers offering plant care guides, shopping, and expert consultations with a calming design.",
@@ -82,8 +82,7 @@ const Projects = () => {
         className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-10 justify-center w-full max-w-[1100px]"
         initial="hidden"
         whileInView="visible"
-viewport={{ once: false, amount: 0.25 }}
-
+        viewport={{ once: false, amount: 0.25 }}
       >
         {projects.map(
           ({ id, name, image, liveLink, description, techStack }, i) => (
@@ -92,7 +91,7 @@ viewport={{ once: false, amount: 0.25 }}
               className="bg-[var(--pf-base-100)] rounded-xl shadow-lg overflow-hidden transform hover:scale-[1.03] duration-300 flex flex-col"
               variants={cardVariants}
               custom={i}
-              style={{ minWidth: "320px" }} 
+              style={{ minWidth: "320px" }}
             >
               {/* Project Image */}
               <img
@@ -117,7 +116,7 @@ viewport={{ once: false, amount: 0.25 }}
                       className="text-xs font-semibold px-3 py-1 rounded-full bg-[var(--pf-accent)]"
                       style={{
                         userSelect: "none",
-                        color: "#2e2e2e", 
+                        color: "#2e2e2e",
                       }}
                     >
                       {tech}
@@ -128,7 +127,7 @@ viewport={{ once: false, amount: 0.25 }}
                 <div className="mt-auto flex justify-between items-center space-x-4">
                   <Link
                     to={`/projects/${id}`}
-                    className="btn btn-primary px-4 py-2 font-semibold rounded-md transition shadow"
+                    className="resume-btn bg-[var(--pf-primary)] px-6 py-1 rounded-lg shadow-lg hover:bg-[var(--pf-accent)] transition-colors duration-300 font-semibold text-md cursor-pointer flex items-center justify-center select-none drop-shadow-md text-[var(--pf-base-100)]"
                     style={{
                       backgroundColor: "var(--pf-primary)",
                       color: "var(--pf-base-100)",
@@ -138,12 +137,23 @@ viewport={{ once: false, amount: 0.25 }}
                     View Details
                   </Link>
 
-                  <a
+                  {/* <a
                     href={liveLink}
                     target="_blank"
                     rel="noopener noreferrer"
                     className="text-[var(--pf-accent)] font-semibold underline hover:text-[var(--pf-secondary)] transition"
                     aria-label={`Visit live site of ${name}`}
+                  >
+                    Live Site
+                  </a> */}
+
+                  <a
+                    href={liveLink}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="resume-btn bg-[var(--pf-primary)] px-6 py-1 rounded-lg shadow-lg hover:bg-[var(--pf-accent)] transition-colors duration-300 font-semibold text-md cursor-pointer flex items-center justify-center select-none drop-shadow-md text-[var(--pf-base-100)]"
+                    aria-label="Visit Live Project"
+                    title="Live Site"
                   >
                     Live Site
                   </a>

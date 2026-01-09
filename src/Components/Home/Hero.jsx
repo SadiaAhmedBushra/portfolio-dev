@@ -1,5 +1,6 @@
 import React from "react";
 import { motion } from "framer-motion";
+import { MdOutlineDownloadForOffline } from "react-icons/md";
 import photoUrl from "../../assets/bFormal.png";
 
 const slideLeft = {
@@ -25,7 +26,10 @@ const Hero = () => {
     <section
       id="home"
       className="relative min-h-[80vh] flex flex-col md:flex-row items-center max-w-7xl mx-auto px-4 sm:px-6 md:px-12 py-16 overflow-hidden"
-      style={{ color: "var(--pf-primary)", backgroundColor: "var(--pf-base-100)" }}
+      style={{
+        color: "var(--pf-primary)",
+        backgroundColor: "var(--pf-base-100)",
+      }}
     >
       {/* Floating Ambient Background */}
       <div
@@ -60,15 +64,23 @@ const Hero = () => {
         whileInView="visible"
         viewport={{ once: true, amount: 0.4 }}
       >
-        <h1 className="text-4xl sm:text-5xl font-extrabold tracking-wide" style={{ color: "var(--pf-primary)" }}>
+        <h1
+          className="text-4xl sm:text-5xl font-extrabold tracking-wide"
+          style={{ color: "var(--pf-primary)" }}
+        >
           Sadia Ahmed Bushra
         </h1>
-        <p className="text-lg sm:text-xl font-semibold" style={{ color: "var(--pf-secondary)" }}>
+        <p
+          className="text-lg sm:text-xl font-semibold"
+          style={{ color: "var(--pf-secondary)" }}
+        >
           Junior Web Developer | Teaching Assistant
         </p>
-        <p className="text-sm sm:text-base max-w-xl mx-auto md:mx-0" style={{ color: "var(--pf-primary)" }}>
-          I specialize in creating modern web applications with React and Tailwind CSS, focusing on performance,
-          accessibility, and seamless user experiences. Dedicated to continuous learning and delivering professional results.
+        <p className="text-sm sm:text-base max-w-xl mx-auto md:mx-0  text-[var(--pf-secondary)] ">
+          I specialize in creating modern web applications with React and
+          Tailwind CSS, focusing on performance, accessibility, and seamless
+          user experiences. Dedicated to continuous learning and delivering
+          professional results.
         </p>
 
         <motion.div
@@ -81,29 +93,18 @@ const Hero = () => {
             target="_blank"
             rel="noopener noreferrer"
             download
-            className="resume-btn bg-[var(--pf-primary)] px-6 py-3 rounded-full shadow-lg hover:bg-[var(--pf-accent)] transition-colors duration-300 font-semibold text-lg cursor-pointer flex items-center gap-3 select-none drop-shadow-md mx-auto md:mx-0"
+            className="resume-btn bg-[var(--pf-primary)] px-6 py-2 rounded-lg shadow-lg hover:bg-[var(--pf-accent)] transition-colors duration-300 font-semibold text-lg cursor-pointer flex items-center gap-3 select-none drop-shadow-md mx-auto md:mx-0"
             aria-label="Download Resume"
             title="Download Resume"
             style={{
               textShadow: "0 0 5px rgba(0, 0, 0, 0.2)",
             }}
           >
-            <svg
-              xmlns="http://www.w3.org/2000/svg"
+            <MdOutlineDownloadForOffline
               className="h-6 w-6"
-              fill="none"
-              viewBox="0 0 24 24"
-              stroke="currentColor"
-              strokeWidth={2}
               style={{ color: "inherit" }}
-            >
-              <path
-                strokeLinecap="round"
-                strokeLinejoin="round"
-                d="M4 16v2a2 2 0 002 2h12a2 2 0 002-2v-2M12 12v8m0 0l-4-4m4 4l4-4M12 4v8"
-              />
-            </svg>
-            Resume
+            />
+            Download Resume
           </a>
         </motion.div>
       </motion.div>

@@ -1,5 +1,6 @@
 import React, { useEffect, useState } from "react";
 import { motion, AnimatePresence } from "framer-motion";
+import { HiArrowLeft, HiArrowRight } from "react-icons/hi";
 
 const educationData = [
   {
@@ -158,47 +159,21 @@ const EducationalQualification = () => {
           <button
             onClick={() => paginate(-1)}
             aria-label="Previous"
-            className="bg-[var(--pf-primary)] px-6 py-3 rounded-full shadow-lg hover:bg-[var(--pf-accent)] transition-colors duration-300 font-semibold cursor-pointer flex items-center gap-2 select-none drop-shadow-md text-[var(--pf-base-100)] dark:text-[var(--pf-base-900)]"
+            className="bg-[var(--pf-primary)] px-6 py-2 rounded-lg shadow-lg hover:bg-[var(--pf-accent)] transition-colors duration-300 font-semibold cursor-pointer flex items-center gap-2 select-none drop-shadow-md text-[var(--pf-base-100)] dark:text-[var(--pf-base-900)]"
             style={{ textShadow: "0 0 5px rgba(0,0,0,0.2)" }}
           >
-            <svg
-              xmlns="http://www.w3.org/2000/svg"
-              className="h-5 w-5"
-              fill="none"
-              viewBox="0 0 24 24"
-              stroke="currentColor"
-              strokeWidth={2}
-            >
-              <path
-                strokeLinecap="round"
-                strokeLinejoin="round"
-                d="M15 19l-7-7 7-7"
-              />
-            </svg>
+            {/* <HiArrowLeft className="h-5 w-5" /> */}
             Prev
           </button>
 
           <button
             onClick={() => paginate(1)}
             aria-label="Next"
-            className="bg-[var(--pf-primary)] px-6 py-3 rounded-full shadow-lg hover:bg-[var(--pf-accent)] transition-colors duration-300 font-semibold cursor-pointer flex items-center gap-2 select-none drop-shadow-md text-[var(--pf-base-100)] dark:text-[var(--pf-base-900)]"
+            className="bg-[var(--pf-primary)] px-6 py-2 rounded-lg shadow-lg hover:bg-[var(--pf-accent)] transition-colors duration-300 font-semibold cursor-pointer flex items-center gap-2 select-none drop-shadow-md text-[var(--pf-base-100)] dark:text-[var(--pf-base-900)]"
             style={{ textShadow: "0 0 5px rgba(0,0,0,0.2)" }}
           >
             Next
-            <svg
-              xmlns="http://www.w3.org/2000/svg"
-              className="h-5 w-5"
-              fill="none"
-              viewBox="0 0 24 24"
-              stroke="currentColor"
-              strokeWidth={2}
-            >
-              <path
-                strokeLinecap="round"
-                strokeLinejoin="round"
-                d="M9 5l7 7-7 7"
-              />
-            </svg>
+            {/* <HiArrowRight className="h-5 w-5" /> */}
           </button>
         </div>
       </div>
